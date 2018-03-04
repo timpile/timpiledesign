@@ -6,7 +6,7 @@ module DefaultPageContentConcern
   end
 
   def set_page_defaults
-    @page_title = "Tim Pile | Design & Development"
+    @page_title = "Tim Pile | Web Design & Development"
     @seo_keywords = "Tim Pile Design Development Ruby Rails HTML Wordpress Web"
   end
 end
