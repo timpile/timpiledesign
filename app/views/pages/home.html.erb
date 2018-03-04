@@ -1,7 +1,7 @@
 
 <div class="wrapper">
     <div class="page-header clear-filter" filter-color="red">
-        <div class="page-header-image" data-parallax="true" style="background-image: url('./assets/img/tim-home.png');">
+        <div class="page-header-image" data-parallax="true" style="background-image: url('<%= image_path("tim-home.png") %>');">
         </div>
         <div class="container">
             <div class="content-center brand">
@@ -22,7 +22,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/project6.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("project6.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                     <%= fm_icon "icon-ruby-on-rails-alt" %>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/project16.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("project16.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                     <%= fm_icon "icon-bootstrap" %>
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/bg23.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("bg23.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                     <%= fm_icon "icon-wordpress" %>
@@ -67,7 +67,7 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/bg24.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("bg24.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                     <i class="now-ui-icons design_vector"></i>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/project15.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("project15.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                     <%= fa_icon('bullhorn') %>
@@ -95,7 +95,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card card-background card-raised" data-background-color style="background-image: url('assets/img/project14.jpg')">
+                        <div class="card card-background card-raised" data-background-color style="background-image: url('<%= image_path("project14.jpg") %>');">
                             <div class="info">
                                 <div class="icon icon-white">
                                   <i class="now-ui-icons business_chart-bar-32"></i>
@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <div class="team-5 section-image" style="background-image: url('assets/img/bg4.jpg')">
+        <div class="team-5 section-image" style="background-image: url('<%= image_path("bg4.jpg") %>');">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 ml-auto mr-auto text-center">
@@ -126,7 +126,7 @@
                     <div class="col-md-4">
                         <div class="card card-profile">
                             <div class="card-avatar">
-                                <img class="img img-raised" src="assets/img/tim-profile.png" />
+                                <%= image_tag("tim-profile.png", class: "img img-raised") %>
                             </div>
                             <div class="card-body">
                                 <h4 class="card-title">Tim Pile</h4>
