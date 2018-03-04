@@ -1,0 +1,42 @@
+<div class="page-header" filter-color="orange">
+    <div class="page-header-image" style="background-image:url(../assets/img/login.jpg)"></div>
+    <div class="content">
+        <div class="container">
+            <div class="col-md-5 ml-auto mr-auto">
+                <div class="card card-login card-plain">
+                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                      <%= devise_error_messages! %>
+                        <div class="card-header text-center">
+                            <div class="logo-container">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                          <div class="input-group form-group-no-border input-lg">
+                              <div class="input-group-prepend">
+                                  <span class="input-group-text"><i class="now-ui-icons ui-1_email-85"></i></span>
+                              </div>
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email", label: false, class: "form-control" %>
+                          </div>
+                        <div class="input-group form-group-no-border input-lg">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="now-ui-icons objects_key-25"></i></span>
+                            </div>
+                            <%= f.password_field :password, autocomplete: "off", label: false, class: "form-control" %>
+                          </div>
+                        </div>
+                        <div class="card-footer text-center">
+                            <%= f.submit "Log in", class: "btn btn-danger btn-round btn-lg btn-block" %>
+                        </div>
+                        <!-- <div class="pull-left">
+                            <h6><%#= link_to "Create Account", new_user_registration_path, class: "link" %></h6>
+                        </div>
+                        <div class="pull-right">
+                            <h6><a href="#" class="link">Need Help?</a></h6>
+                        </div> -->
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= render 'shared/footer' %>
+</div>

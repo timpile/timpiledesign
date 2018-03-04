@@ -1,0 +1,25 @@
+@import "bootstrap.min";
+@import "now-ui-kit";
+@import "font-awesome";
+@import "gritter";
+@import "demo";
+@import "font-mfizz";
+
+@font-face {
+  font-family: 'Nucleo Outline';
+  src:url(asset-path('fonts/nucleo-outline.eot'));
+  src:url(asset-path('fonts/nucleo-outline.eot')) format('embedded-opentype'),
+      url(asset-path('fonts/nucleo-outline.woff2')) format('woff2'),
+      url(asset-path('fonts/nucleo-outline.woff')) format('woff'),
+      url(asset-path('fonts/nucleo-outline.ttf')) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.presentation-page .page-header, .index-page .page-header {
+  background: none;
+}
+.page-header::after, .page-header::before {
+  position: absolute;
+  z-index: -1;
+}

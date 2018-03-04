@@ -1,0 +1,98 @@
+<div class="page-header section-image">
+    <div class="page-header-image" style="background-image:url(../assets/img/bg18.jpg)"></div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 ml-auto mr-auto">
+                    <div class="info info-horizontal">
+                        <div class="icon icon-primary">
+                            <i class="now-ui-icons media-1_button-pause"></i>
+                        </div>
+                        <div class="description">
+                            <h5 class="info-title">Daily Updates</h5>
+                            <p class="description">
+                                Excellent communication
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info info-horizontal">
+                        <div class="icon icon-primary">
+                            <i class="now-ui-icons media-2_sound-wave"></i>
+                        </div>
+                        <div class="description">
+                            <h5 class="info-title">Daily Updates</h5>
+                            <p class="description">
+                                We will work with you to make sure you are getting exactly what you want.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info info-horizontal">
+                        <div class="icon icon-info">
+                            <i class="now-ui-icons users_single-02"></i>
+                        </div>
+                        <div class="description">
+                            <h5 class="info-title">Built Audience</h5>
+                            <p class="description">
+                                There is also a Fully Customizable CMS Admin Dashboard for this product.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mr-auto">
+                    <div class="container">
+                        <div class="row">
+                            <div class="card card-signup" data-background-color="red">
+                                <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                                <%= devise_error_messages! %>
+                                    <div class="header text-center">
+                                        <h4 class="title title-up">New Client Account</h4>
+                                        <div class="social-line">
+                                            <a href="#" class="btn btn-neutral btn-facebook btn-icon btn-round">
+                                                <%= fa_icon('facebook-square') %>
+                                            </a>
+                                            <a href="#" class="btn btn-neutral btn-twitter btn-icon btn-lg btn-round">
+                                                <%= fa_icon('twitter') %>
+                                            </a>
+                                            <a href="#" class="btn btn-neutral btn-google btn-icon btn-round">
+                                                <%= fa_icon('google-plus') %>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="input-group form-group-no-border">
+                                            <span class="input-group-addon">
+                                                <i class="now-ui-icons users_circle-08"></i>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder=" Name">
+                                            <%#= f.email_field :name, autofocus: true, autocomplete: "name", class: "form-control" %>
+                                        </div>
+                                        <div class="input-group form-group-no-border">
+                                            <span class="input-group-addon">
+                                                <i class="now-ui-icons ui-1_email-85"></i>
+                                            </span>
+                                            <%= f.email_field :email, autofocus: "off", autocomplete: "email", class: "form-control" %>
+                                        </div>
+                                        <div class="input-group form-group-no-border">
+                                            <span class="input-group-addon">
+                                                <i class="now-ui-icons objects_key-25"></i>
+                                            </span>
+                                            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                                        </div>
+                                    </div>
+                                    <div class="footer text-center">
+                                        <%= f.submit "Get Started", class: "btn btn-neutral btn-round btn-lg" %></br>
+                                        <%= link_to "Login", new_user_session_path %>
+                                    </div>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= render 'shared/footer' %>
+</div>
