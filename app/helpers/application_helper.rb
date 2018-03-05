@@ -16,12 +16,8 @@ module ApplicationHelper
   def nav_items
     [
       # {
-      #   url: about_path,
-      #   title: "About"
-      # },
-      # {
-      #   url: contact_path,
-      #   title: "Contact"
+      #   url: blog_path,
+      #   title: "Blog"
       # },
     ]
   end
@@ -111,4 +107,5 @@ module ApplicationHelper
     end
     social_links.html_safe
   end
+
 end

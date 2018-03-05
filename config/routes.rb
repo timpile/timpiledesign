@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :messages, only: [:create]
   resources :posts
+  get 'blog', to: 'pages#blog'
   root to: 'pages#home'
 end

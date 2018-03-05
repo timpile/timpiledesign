@@ -18,8 +18,8 @@
 
   </head>
 
-  <body class="index-page">
-    <%= render 'shared/nav', nav_class: "navbar navbar-expand-lg bg-danger fixed-top navbar-transparent" %>
+  <body class="<%= @body_style %>">
+    <%= render 'shared/nav', nav_class: @nav_style %>
     <%= yield %>
   </body>
 
