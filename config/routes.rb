@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show]
   root to: 'pages#home'
+  get 'contact-me', to: 'messages#new', as: 'new_message'
+  post 'contact-me', to: 'messages#create', as: 'create_message'
 end
