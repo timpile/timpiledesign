@@ -1,17 +1,14 @@
 class MessagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
-  def new
-    @message = Message.new
-  end
+  skip_before_action :authenticate_user!, only: [:create]
 
   def create
-    message_params = params.require(:message).permit(:name, :email, :body)
-    @message = Message.new message_params
+    @message = Message.new(message_params)
 
     if @message.valid?
-      redirect_to new_message_url, notice: "Message received, thanks!"
+      MessageMailer.contact_me(@message).deliver_now
+      redirect_to root_url, notice: "Message received, thanks!"
     else
-      render :new
+      redirect_to root_url, error: "There was a problem sending your message."
     end
   end
 
