@@ -50,6 +50,7 @@ group :development, :test do
   gem 'pry-byebug'
   ### For Environment variables and Secrets
   gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
+  gem 'rails-controller-testing'
 end
 
 group :development do

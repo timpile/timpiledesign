@@ -1,0 +1,13 @@
+admin:
+  name: Tim Pile
+  company: Company Inc.
+  email: test@example.com
+  roles: site_admin
+  encrypted_password: password
+
+user:
+  name: Regular User
+  company: Company Inc.
+  email: test2@example.com
+  roles: user
+  encrypted_password: password

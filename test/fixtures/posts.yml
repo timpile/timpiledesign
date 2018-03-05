@@ -1,0 +1,7 @@
+one:
+  user: admin
+  topic: one
+  title: Post Title
+  body: Lorem ipsum dolor sit amet
+  slug: post-title
+  status: 0
