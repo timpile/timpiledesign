@@ -116,7 +116,7 @@ module ApplicationHelper
     if img.present?
       img
     else
-      image_generator(height: '100', width: '100')
+      image_generator(height: '500', width: '500')
     end
   end
 
