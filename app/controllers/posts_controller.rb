@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :index]
+  skip_before_action :authenticate_user!, only: [:show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  access all: [:show, :index], site_admin: :all
+  access all: [:show], site_admin: :all
 
   def index
     @posts = Post.all
@@ -47,6 +47,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:topic_id, :title, :body, :status)
+      params.require(:post).permit(:topic_id, :title, :body, :status, :main_image, :thumb_image)
     end
 end
