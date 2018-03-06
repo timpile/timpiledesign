@@ -108,4 +108,16 @@ module ApplicationHelper
     social_links.html_safe
   end
 
+  def image_generator(height:, width:)
+    "http://via.placeholder.com/#{height}x#{width}"
+  end
+
+  def image_helper img
+    if img.present?
+      img
+    else
+      image_generator(height: '100', width: '100')
+    end
+  end
+
 end

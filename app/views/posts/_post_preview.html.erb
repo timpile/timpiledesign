@@ -1,0 +1,22 @@
+<div class="card card-plain card-blog">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card-image">
+                <img class="img img-raised rounded" src="<%= image_path("") %>" />
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3 class="card-title">
+                <%= link_to post.title, post %>
+            </h3>
+            <p class="card-description">
+                <%= post.body[0..250] %>
+                <%= link_to "Read More", post %>
+            </p>
+            <div class="author">
+                <%= image_tag(image_helper(post.user.image), class: "avatar img-raised") %>
+                <span><%= post.user.name %></span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @blogs = Post.order("created_at DESC")
+    @posts = Post.order("created_at DESC")
   end
 end

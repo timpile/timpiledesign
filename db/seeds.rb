@@ -8,12 +8,10 @@ user = User.create!(
 
 Topic.create!([
   { name: 'Uncategorized' },
-  { name: 'Wordpress' },
-  { name: 'Ruby on Rails' },
-  { name: 'Algorithms' },
-  { name: 'Marketing' },
-  { name: 'Development Process' },
-  { name: 'Design' }
+  { name: 'Programming' },
+  { name: 'Personal Growth' },
+  { name: 'Business' },
+  { name: 'Technology' }
 ])
 
 topic = Topic.find_by_name('Uncategorized')
