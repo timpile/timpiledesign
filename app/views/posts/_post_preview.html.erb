@@ -10,7 +10,7 @@
                 <%= link_to post.title, post %>
             </h3>
             <p class="card-description">
-                <%= post.body[0..250] %>
+                <%= markdown post.body[0..250] %>
                 <%= link_to "Read More", post %>
             </p>
             <div class="author">

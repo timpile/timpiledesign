@@ -42,8 +42,8 @@ gem 'cocoon', '~> 1.2', '>= 1.2.11'
 gem 'gritter', '~> 1.2'
 
 ### For Markdown interpreter and code highlighting
-# gem 'redcarpet', '~> 3.4'
-# gem 'coderay', '~> 1.1', '>= 1.1.2'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
