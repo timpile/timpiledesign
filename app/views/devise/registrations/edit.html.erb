@@ -1,84 +1,85 @@
-
-<div class="wrapper">
-    <%= render 'shared/account_sidebar' %>
-    <div class="main-panel">
-        <%= render 'shared/account_nav' %>
-        <div class="content">
-            <div class="container-fluid">
+<body class="sidebar-mini ">
+    <div class="wrapper">
+        <%= render 'shared/dashboard_sidebar' %>
+        <div class="main-panel">
+            <%= render 'shared/dashboard_nav' %>
+            <div class="panel-header panel-header-sm">
+            </div>
+            <div class="content">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Edit Profile</h4>
+                                <h5 class="title">Edit Profile</h5>
                             </div>
                             <div class="card-body">
-                              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-                                <%= devise_error_messages! %>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <%= f.label :company %>
-                                                <%= f.text_field :company, placeholder: "Company Inc.", class: "form-control" %>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <%= f.label :name %>
-                                                <%= f.text_field :name, placeholder: "Full Name", class: "form-control" %>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <%= f.label :email %>
-                                                <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control" %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <%= f.label :about %>
-                                                <%= f.text_area :about, placeholder: "Tell us about yourself", class: "form-control", rows: 10 %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                              <%= f.label :password %>
-                                              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-                                              <small>(leave blank if you don't want to change it)</small>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                              <%= f.label :password_confirmation %>
-                                              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                              <%= f.label :current_password %>
-                                              <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-                                              <small>(we need your current password to confirm your changes)</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <%= f.submit "Update Profile", class:"btn btn-info btn-fill btn-block" %>
-                                    <div class="clearfix"></div>
-                                <% end %>
+                                <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                                  <%= devise_error_messages! %>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <%= f.label :company %>
+                                              <%= f.text_field :company, placeholder: "Company Inc.", class: "form-control" %>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <%= f.label :name %>
+                                              <%= f.text_field :name, placeholder: "Full Name", class: "form-control" %>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <%= f.label :email %>
+                                              <%= f.email_field :email, autocomplete: "email", placeholder: "Email", class: "form-control" %>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <%= f.label :about %>
+                                              <%= f.text_area :about, placeholder: "Tell us about yourself", class: "form-control", rows: 10 %>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                            <%= f.label :password %>
+                                            <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+                                            <small>(leave blank if you don't want to change it)</small>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                            <%= f.label :password_confirmation %>
+                                            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-4">
+                                          <div class="form-group">
+                                            <%= f.label :current_password %>
+                                            <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+                                            <small>(we need your current password to confirm your changes)</small>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <%= f.submit "Update Profile", class:"btn btn-info btn-fill btn-block" %>
+                                  <div class="clearfix"></div>
+                              <% end %>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card card-user">
-                            <div class="card-image">
+                            <div class="image">
                                 <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
                             </div>
                             <div class="card-body">
@@ -87,28 +88,13 @@
                                         <%= image_tag("default-avatar.png", class: "avatar border-gray") %>
                                         <h5 class="title"><%= @user.name %></h5>
                                     </a>
-                                    <p class="description">
-
-                                    </p>
+                                    <p class="description"></p>
                                 </div>
                                 <p class="description text-center">
                                     <%= @user.about %>
                                 </p>
                             </div>
-                            <hr>
-                            <div class="button-container mr-auto ml-auto">
-                                <button href="#" class="btn btn-simple btn-link btn-icon">
-                                    <i class="fa fa-facebook-square"></i>
-                                </button>
-                                <button href="#" class="btn btn-simple btn-link btn-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </button>
-                                <button href="#" class="btn btn-simple btn-link btn-icon">
-                                    <i class="fa fa-google-plus-square"></i>
-                                </button>
-                            </div>
                         </div>
-
                         <div class="card">
                           <div class="card-body">
                             <div class="text-center">
@@ -118,11 +104,10 @@
                             </div>
                           </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+            <%= render 'shared/footer' %>
         </div>
-        <%= render 'shared/footer' %>
     </div>
-</div>
+</body>

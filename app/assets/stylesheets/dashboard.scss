@@ -1,0 +1,19 @@
+@import "bootstrap.min";
+@import "now-ui-dashboard";
+@import "font-awesome";
+@import "gritter";
+
+@font-face {
+  font-family: 'Nucleo Outline';
+  src:url(asset-path('fonts/nucleo-outline.eot'));
+  src:url(asset-path('fonts/nucleo-outline.eot')) format('embedded-opentype'),
+      url(asset-path('fonts/nucleo-outline.woff2')) format('woff2'),
+      url(asset-path('fonts/nucleo-outline.woff')) format('woff'),
+      url(asset-path('fonts/nucleo-outline.ttf')) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a, a:hover, a:focus {
+  color: #FF3636;
+}
