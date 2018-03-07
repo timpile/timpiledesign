@@ -17,3 +17,6 @@
 a, a:hover, a:focus {
   color: #FF3636;
 }
+textarea.form-control {
+  max-height: 500px;
+}

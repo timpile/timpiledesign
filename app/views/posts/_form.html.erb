@@ -1,32 +1,62 @@
-<%= form_with(model: post, local: true) do |form| %>
-  <% if post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
-      <ul>
-      <% post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+<div class="col-md-8">
+    <div class="card">
+        <%= form_with(model: post, local: true) do |f| %>
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h5 class="title">Edit Post</h5>
+                    </div>
+                    <div class="col-md-3">
+                        <%= link_to post.status.capitalize, toggle_status_post_path(post), class:"btn btn-danger btn-fill btn-block" %>
+                    </div>
+                    <div class="col-md-3">
+                        <%= f.submit "Save Post", class:"btn btn-info btn-fill btn-block" %>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <%= f.label :topic_id %>
+                            <%= f.text_field :topic_id, id: :post_topic_id, class: "form-control" %>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <%= f.label :title %>
+                            <%= f.text_field :title, id: :post_title, class: "form-control" %>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <%= f.label :body %>
+                            <%= f.text_area :body, id: :post_body, placeholder: "Blog post content", class: "form-control", rows: 15  %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :topic_id %>
-    <%= form.text_field :topic_id, id: :post_topic_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :post_title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, id: :post_body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
+<div class="col-md-4">
+    <div class="card card-user">
+        <div class="image">
+            <img src="https://ununsplash.imgix.net/photo-1431578500526-4d9613015464?fit=crop&fm=jpg&h=300&q=75&w=400" alt="...">
+        </div>
+        <div class="card-body">
+            <div class="author">
+                <a href="#">
+                    <%= image_tag("default-avatar.png", class: "avatar border-gray") %>
+                    <h5 class="title"><%= post.user.name %></h5>
+                </a>
+                <p class="description"></p>
+            </div>
+            <p class="description text-center">
+                <%= current_user.about %>
+            </p>
+        </div>
+    </div>
+</div>

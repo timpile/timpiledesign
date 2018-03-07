@@ -15,8 +15,22 @@
     <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload' %>
 
   </head>
-
-  <%= yield %>
+  <body class="sidebar-mini ">
+      <div class="wrapper">
+          <%= render 'shared/dashboard_sidebar' %>
+          <div class="main-panel">
+              <%= render 'shared/dashboard_nav' %>
+              <div class="panel-header panel-header-sm">
+              </div>
+              <div class="content">
+                  <div class="row">
+                      <%= yield %>
+                  </div>
+              </div>
+              <%= render 'shared/footer' %>
+          </div>
+      </div>
+  </body>
   <%= alerts %>
 
 </html>
