@@ -1,11 +1,21 @@
-
 <div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image" data-parallax="true" style="background-image: url('<%= image_url(image_helper(@post.main_image)) %>')">
+        </div>
+    </div>
     <div class="section">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto">
-                    <h3 class="title"><%= @post.title %></h3>
-                    <%= render 'posts/admin_actions', post: @post %>
+                    <h2 class="title"><%= @post.title %></h2>
+                    <nav class="breadcrumb">
+                        <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
+                        <%= link_to "Blog", blog_path, class: 'breadcrumb-item' %>
+                        <span class="breadcrumb-item active"><%= @post.title %></span>
+                    </nav>
+                    <span class="pull-right"><%= render 'posts/admin_actions', post: @post %></span>
+                    Published <%= distance_of_time_in_words(@post.created_at, Time.current) %> ago
+                    
                     <p><%= markdown @post.body %></p>
                 </div>
             </div>
