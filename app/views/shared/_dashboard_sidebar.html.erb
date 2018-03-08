@@ -40,36 +40,38 @@
             </div>
         </div>
         <ul class="nav">
-            <li class="active">
-                <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
-                    <%= fa_icon("feed") %>
-                    <p>Blog
-                        <b class="caret"></b>
-                    </p>
-                </a>
-                <div class="collapse show" id="pagesExamples">
-                    <ul class="nav">
-                        <li>
-                            <%= link_to posts_path do %>
-                                <span class="sidebar-mini-icon"><%= fa_icon("list") %></span>
-                                <span class="sidebar-normal">All Posts</span>
-                            <% end %>
-                        </li>
-                        <li>
-                            <%= link_to new_post_path do %>
-                                <span class="sidebar-mini-icon"><%= fa_icon("plus") %></span>
-                                <span class="sidebar-normal">New Post</span>
-                            <% end %>
-                        </li>
-                        <!-- <li>
-                            <%#= link_to comments_path do %>
-                                <span class="sidebar-mini-icon">C</span>
-                                <span class="sidebar-normal">Comments</span>
-                            <%# end %>
-                        </li> -->
-                    </ul>
-                </div>
-            </li>
+            <% if logged_in?(:site_admin) %>
+              <li class="active">
+                  <a data-toggle="collapse" href="#pagesExamples" aria-expanded="true">
+                      <%= fa_icon("feed") %>
+                      <p>Blog
+                          <b class="caret"></b>
+                      </p>
+                  </a>
+                  <div class="collapse show" id="pagesExamples">
+                      <ul class="nav">
+                          <li>
+                              <%= link_to posts_path do %>
+                                  <span class="sidebar-mini-icon"><%= fa_icon("list") %></span>
+                                  <span class="sidebar-normal">All Posts</span>
+                              <% end %>
+                          </li>
+                          <li>
+                              <%= link_to new_post_path do %>
+                                  <span class="sidebar-mini-icon"><%= fa_icon("plus") %></span>
+                                  <span class="sidebar-normal">New Post</span>
+                              <% end %>
+                          </li>
+                          <!-- <li>
+                              <%#= link_to comments_path do %>
+                                  <span class="sidebar-mini-icon">C</span>
+                                  <span class="sidebar-normal">Comments</span>
+                              <%# end %>
+                          </li> -->
+                      </ul>
+                  </div>
+              </li>
+            <% end %>
         </ul>
     </div>
 </div>
