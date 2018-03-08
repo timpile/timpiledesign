@@ -29,6 +29,9 @@ gem 'devise', '~> 4.4', '>= 4.4.1'
 ### For User Authorization
 gem 'petergate', '~> 1.8', '>= 1.8.1'
 
+### For Styles
+gem 'bootstrap', '~> 4.0.0'
+
 ### For Icons
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.3'
 gem 'font-mfizz-rails', '~> 1.1', '>= 1.1.1'
