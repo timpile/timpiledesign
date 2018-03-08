@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :toggle_status]
   access all: [:show], site_admin: :all
 
   def index
@@ -8,6 +8,15 @@ class PostsController < ApplicationController
   end
 
   def show
+    if logged_in?(:site_admin) || @post.published?
+      @post = Post.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+
+      @page_title = @post.title
+      @seo_keywords = @post.title # add a field to model for keywords
+    else
+      redirect_to blog_path, notice: "You are not authorized to access this page."
+    end
   end
 
   def new
@@ -39,6 +48,15 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_path, notice: 'Post was successfully destroyed.'
+  end
+
+  def toggle_status
+    if @post.draft?
+      @post.published!
+    elsif @post.published?
+      @post.draft!
+    end
+    redirect_to @post, notice: 'Post status has been updated.'
   end
 
   private

@@ -1,8 +1,7 @@
-@import "bootstrap.min";
+@import "bootstrap";
 @import "now-ui-kit";
 @import "font-awesome";
 @import "gritter";
-@import "demo";
 @import "font-mfizz";
 
 @font-face {
@@ -26,4 +25,13 @@
 
 .now-ui-icons.design_vector {
   margin-top: 12px;
+}
+
+a, a:hover, a:focus {
+  color: #FF3636;
+}
+
+.btn-neutral {
+  background-color: #FFFFFF;
+  color: #FF3636;
 }

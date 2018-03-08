@@ -6,11 +6,11 @@
             </div>
         </div>
         <div class="col-md-8">
-            <h3 class="card-title">
+            <h4 class="card-title">
                 <%= link_to post.title, post %>
-            </h3>
+            </h4>
             <p class="card-description">
-                <%= post.body[0..250] %>
+                <%= markdown post.body[0..250] %>
                 <%= link_to "Read More", post %>
             </p>
             <div class="author">

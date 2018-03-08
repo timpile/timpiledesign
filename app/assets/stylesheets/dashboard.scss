@@ -1,0 +1,33 @@
+@import "bootstrap";
+@import "now-ui-dashboard";
+@import "font-awesome";
+@import "gritter";
+@import "font-mfizz";
+
+@font-face {
+  font-family: 'Nucleo Outline';
+  src:url(asset-path('fonts/nucleo-outline.eot'));
+  src:url(asset-path('fonts/nucleo-outline.eot')) format('embedded-opentype'),
+      url(asset-path('fonts/nucleo-outline.woff2')) format('woff2'),
+      url(asset-path('fonts/nucleo-outline.woff')) format('woff'),
+      url(asset-path('fonts/nucleo-outline.ttf')) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+textarea.form-control {
+  max-height: 500px;
+}
+
+.now-ui-icons.design_vector {
+  margin-top: 12px;
+}
+
+a, a:hover, a:focus {
+  color: #FF3636;
+}
+
+.btn-neutral {
+  background-color: #FFFFFF;
+  color: #FF3636;
+}

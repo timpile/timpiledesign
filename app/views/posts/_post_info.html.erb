@@ -1,0 +1,48 @@
+<div class="section section-blog-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="row">
+                    <!-- <div class="col-md-6">
+                        <div class="blog-tags">
+                            Tags:
+                            <span class="label label-danger">Photography</span>
+                            <span class="label label-danger">Stories</span>
+                            <span class="label label-danger">Castle</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#pablo" class="btn btn-google btn-round pull-right">
+                            <i class="fa fa-google"></i> 232
+                        </a>
+                        <a href="#pablo" class="btn btn-twitter btn-round pull-right">
+                            <i class="fa fa-twitter"></i> 910
+                        </a>
+                        <a href="#pablo" class="btn btn-facebook btn-round pull-right">
+                            <i class="fa fa-facebook-square"></i> 872
+                        </a>
+                    </div> -->
+                </div>
+                <hr />
+                <div class="card card-profile card-plain">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="card-avatar">
+                                <a href="#pablo">
+                                    <%= gravatar_helper post.user %>
+                                </a>
+                                <div class="ripple-container"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <h4 class="card-title"><%= post.user.name %></h4>
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-default pull-right btn-round">Follow</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

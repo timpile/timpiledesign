@@ -16,8 +16,8 @@
 
 //= require cocoon
 //= require gritter
+//= require cable
 //= require turbolinks
-//= require_tree .
 
 $(document).on('turbolinks:load', function() {
     // the body of this function is in assets/js/now-ui-kit.js

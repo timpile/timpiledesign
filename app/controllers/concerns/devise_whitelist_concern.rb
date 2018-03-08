@@ -6,7 +6,7 @@ module DeviseWhitelistConcern
   end
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :company, :phone, :about, :image])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :company, :phone])
     devise_parameter_sanitizer.permit(:account_update, keys: [:name, :company, :phone, :about, :image])
   end
 end

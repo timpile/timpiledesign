@@ -1,0 +1,11 @@
+<a class="pull-left" href="#pablo">
+    <div class="avatar">
+        <%= gravatar_helper comment.user %>
+    </div>
+</a>
+<div class="media-body">
+    <h5 class="media-heading"><%= comment.user.name %>
+        <small class="text-muted">&middot; <%= distance_of_time_in_words(comment.created_at, Time.current) %> ago</small>
+    </h5>
+    <p><%= comment.body %></p>
+</div>
