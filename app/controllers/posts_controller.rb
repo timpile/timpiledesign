@@ -8,6 +8,15 @@ class PostsController < ApplicationController
   end
 
   def show
+    if logged_in?(:site_admin) || @post.published?
+      @post = Post.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
+
+      @page_title = @post.title
+      @seo_keywords = @post.title # add a field to model for keywords
+    else
+      redirect_to blog_path, notice: "You are not authorized to access this page."
+    end
   end
 
   def new

@@ -16,6 +16,7 @@
 
 //= require cocoon
 //= require gritter
+//= require cable
 //= require turbolinks
 
 $(document).on('turbolinks:load', function() {

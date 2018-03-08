@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   end
 
   get 'blog', to: 'pages#blog'
+
+  mount ActionCable.server => '/cable'
+  
   root to: 'pages#home'
+
 end
