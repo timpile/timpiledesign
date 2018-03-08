@@ -2,22 +2,20 @@
   <div class="row">
       <div class="col-md-6">
           <div class="form-group">
-              <%= f.label :topic_id %>
-              <%= f.select :topic_id, Topic.all.map { |t| [t.name, t] }, {}, {class: "selectpicker", data: {style: "btn btn-danger btn-round" }} %>
-          </div>
-      </div>
-      <div class="col-md-6">
-          <div class="form-group">
-              <%= f.label :status %>
-              <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s ] }, {}, {class: "selectpicker", data: {style: "btn btn-danger btn-round" }} %>
-          </div>
-      </div>
-  </div>
-  <div class="row">
-      <div class="col-md-12">
-          <div class="form-group">
               <%= f.label :title %>
               <%= f.text_field :title, id: :post_title, class: "form-control" %>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="form-group">
+              <%= f.label :topic %>
+              <%= f.select :topic_id, Topic.all.map { |t| [t.name, t.id] }, {}, {class: "selectpicker", data: {style: "btn btn-info btn-round" }} %>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="form-group">
+              <%= f.label :status %>
+              <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s] }, {}, {class: "selectpicker", data: {style: "btn btn-info btn-round" }} %>
           </div>
       </div>
   </div>
