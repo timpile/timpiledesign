@@ -9,7 +9,7 @@ module LayoutsConcern
   def layouts_by_resource
     if devise_controller? && resource_name == :user && action_name == "edit"
       "dashboard"
-    elsif controller_name == "posts" && ["edit","new"].include?(action_name)
+    elsif controller_name == "posts" && ["edit","new","index"].include?(action_name)
       "dashboard"
     else
       "application"

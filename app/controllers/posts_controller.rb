@@ -42,11 +42,15 @@ class PostsController < ApplicationController
   end
 
   def toggle_status
+    puts @post.status
     if @post.draft?
+      puts @post.status
       @post.published!
     elsif @post.published?
+      puts @post.status
       @post.draft!
     end
+      puts @post.status
     redirect_to @post, notice: 'Post status has been updated.'
   end
 
