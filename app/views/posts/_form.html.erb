@@ -9,13 +9,13 @@
       <div class="col-md-3">
           <div class="form-group">
               <%= f.label :topic %>
-              <%= f.select :topic_id, Topic.all.map { |t| [t.name, t.id] }, {}, {class: "selectpicker", data: {style: "btn btn-info btn-round" }} %>
+              <%= f.select :topic_id, Topic.all.map { |t| [t.name, t.id] }, {}, { class: "selectpicker", data: { style: "btn btn-info btn-round" } } %>
           </div>
       </div>
       <div class="col-md-3">
           <div class="form-group">
               <%= f.label :status %>
-              <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s] }, {}, {class: "selectpicker", data: {style: "btn btn-info btn-round" }} %>
+              <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s] }, {}, { class: "selectpicker", data: { style: "btn btn-info btn-round" } } %>
           </div>
       </div>
   </div>
