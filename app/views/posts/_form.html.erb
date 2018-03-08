@@ -1,50 +1,33 @@
-<div class="col-md-9">
-    <div class="card">
-        <%= form_with(model: post, local: true) do |f| %>
-            <div class="card-header">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h5 class="title">Edit Post</h5>
-                    </div>
-                    <div class="col-md-3">
-                    </div>
-                    <div class="col-md-3">
-                        <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s ] }, {}, {class: "selectpicker", data: {style: "btn btn-danger btn-round" }} %>
-                    </div>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="form-group">
-                            <%= f.label :topic_id %>
-                            <%= f.text_field :topic_id, id: :post_topic_id, class: "form-control" %>
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <%= f.label :title %>
-                            <%= f.text_field :title, id: :post_title, class: "form-control" %>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <%= f.label :body %>
-                            <%= f.text_area :body, id: :post_body, placeholder: "Blog post content", class: "form-control", rows: 15  %>
-                        </div>
-                    </div>
-                </div>
-
-                <%= f.submit "Save Post", class:"btn btn-info btn-fill btn-block" %>
-            </div>
-        <% end %>
-    </div>
-</div>
-<div class="col-md-3">
-    <div class="card card-user">
-        <div class="card-body">
-        </div>
-    </div>
-</div>
+<%= form_with(model: post, local: true) do |f| %>
+  <div class="row">
+      <div class="col-md-6">
+          <div class="form-group">
+              <%= f.label :topic_id %>
+              <%= f.select :topic_id, Topic.all.map { |t| [t.name, t] }, {}, {class: "selectpicker", data: {style: "btn btn-danger btn-round" }} %>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="form-group">
+              <%= f.label :status %>
+              <%= f.select :status, Post.statuses.keys.map { |s| [s.humanize, s ] }, {}, {class: "selectpicker", data: {style: "btn btn-danger btn-round" }} %>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="form-group">
+              <%= f.label :title %>
+              <%= f.text_field :title, id: :post_title, class: "form-control" %>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <div class="form-group">
+              <%= f.label :body %>
+              <%= f.text_area :body, id: :post_body, placeholder: "Blog post content", class: "form-control", rows: 15  %>
+          </div>
+      </div>
+  </div>
+  <%= f.submit "Save Post", class:"btn btn-info btn-fill btn-block" %>
+<% end %>
