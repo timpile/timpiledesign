@@ -15,9 +15,19 @@
   font-style: normal;
 }
 
+textarea.form-control {
+  max-height: 500px;
+}
+
+.now-ui-icons.design_vector {
+  margin-top: 12px;
+}
+
 a, a:hover, a:focus {
   color: #FF3636;
 }
-textarea.form-control {
-  max-height: 500px;
+
+.btn-neutral {
+  background-color: #FFFFFF;
+  color: #FF3636;
 }
