@@ -28,4 +28,12 @@
 
 $(document).on('turbolinks:load', function() {
   $('*:not(.bootstrap-select) > .selectpicker').selectpicker('refresh');
+  $("#post_main_image").bind('change', function() {
+      var file = $(this).val();
+      $("#main_image_text").text(file.substr(12, file.length));
+  });
+  $("#post_thumb_image").bind('change', function() {
+      var file = $(this).val();
+      $("#thumb_image_text").text(file.substr(12, file.length));
+  });
 });
