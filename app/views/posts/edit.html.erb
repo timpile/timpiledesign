@@ -19,6 +19,10 @@
 <div class="col-md-3">
     <div class="card card-user">
         <div class="card-body">
+            <h5>Main Image </h5>
+            <%= image_tag(image_helper(@post.main_image)) %>
+            <h5>Thumb Image </h5>
+            <%= image_tag(image_helper(@post.thumb_image)) %>
         </div>
     </div>
 </div>
