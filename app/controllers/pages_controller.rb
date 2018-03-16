@@ -5,6 +5,10 @@ class PagesController < ApplicationController
   end
 
   def blog
-    @posts = Post.order("created_at DESC").limit(5)
+    if logged_in?(:site_admin)
+      @posts = Post.order("created_at DESC").limit(5)
+    else
+      @posts = Post.published.order("created_at DESC").limit(5)
+    end
   end
 end
